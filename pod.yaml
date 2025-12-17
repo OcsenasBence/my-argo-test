@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name:kezdo-app
+  labels:
+    app:kezdo
+spec:
+  containers:
+  - name:kontener
+  - image:nginx:latest
