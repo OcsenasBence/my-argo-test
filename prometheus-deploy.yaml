@@ -10,6 +10,9 @@ data:
       - job_name: 'prometheus'
         static_configs:
           - targets: ['localhost:9090']
+      - job_name: 'argocd'
+        static_configs:
+          - targets: ['argocd-metrics.argocd.svc.cluster.local:8083']
 ---
 apiVersion: apps/v1
 kind: Deployment
