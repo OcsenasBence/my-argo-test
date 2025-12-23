@@ -7,7 +7,9 @@ metadata:
 spec:
   containers:
   - name: kontener
-    image: nginx:latest
+    image: ocsenasbence/go-exporter:v1
+    ports:
+    - containerPort: 8080
     resources:
       limits:
         memory: "128Mi"
