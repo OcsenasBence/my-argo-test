@@ -7,7 +7,7 @@ metadata:
 spec:
   containers:
   - name: kontener
-    image: ocsenasbence/go-exporter:v1
+    image: ocsenasbence/go-http-server
     ports:
     - containerPort: 8080
     resources:
