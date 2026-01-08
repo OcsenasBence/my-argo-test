@@ -8,8 +8,14 @@ data:
       scrape_interval: 15s
     scrape_configs:
       - job_name: 'prometheus'
-        static_configs:
-          - targets: ['localhost:9090']
+        kubernetes_sd_configs:
+          - role: service
+            namespaces:
+              names:
+              - default
+          selectors:
+            - role: service
+              label: "app=prometheus"
       - job_name: 'argocd'
         kubernetes_sd_configs:
         - role: service
