@@ -11,8 +11,14 @@ data:
         static_configs:
           - targets: ['localhost:9090']
       - job_name: 'argocd'
-        static_configs:
-          - targets: ['argocd-server-metrics.argocd.svc.cluster.local:8083']
+        kubernetes_sd_configs:
+        - role: service
+          namespaces:
+            names:
+              - argocd
+          selectors:
+            - role: service
+              label: "app.kubernetes.io/name=argocd-server-metrics"
       - job_name: 'go-app-pods'
         kubernetes_sd_configs:
         - role: pod
