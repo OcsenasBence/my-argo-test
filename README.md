@@ -2,7 +2,7 @@
 
 This project demonstrates a full-scale cloud-native environment, focusing on a **GitOps-based** CI/CD pipeline (ArgoCD) and a complete **Observability** stack (Prometheus, Grafana). It also includes the development and monitoring of a custom Go application.
 
-## 🛠 Technologies
+## Technologies
 * **Kubernetes** (Orchestration)
 * **ArgoCD** (GitOps / Continuous Delivery)
 * **Prometheus** (Monitoring & Alerting)
@@ -11,7 +11,7 @@ This project demonstrates a full-scale cloud-native environment, focusing on a *
 
 ---
 
-## 🚀 Key Features
+## Key Features
 
 ### 1. Prometheus & ArgoCD Integration
 Monitoring the internal metrics of the CD pipeline.
@@ -39,7 +39,7 @@ Development of a custom Go web server that exposes Prometheus-compatible metrics
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 Files are organized by function to ensure maintainability:
 
@@ -48,7 +48,7 @@ Files are organized by function to ensure maintainability:
 
 ---
 
-## 🔧 Usage
+## Usage
 
 1.  **ArgoCD Sync:** All changes are applied via the ArgoCD interface.
 2.  **Port Forwarding:** Access services locally:
